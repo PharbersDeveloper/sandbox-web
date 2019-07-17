@@ -90,7 +90,7 @@ export default Controller.extend({
 					let store = this.get("store");
 					let { bucket, link } = response,
 						name = new Date().getTime();
-					let uploadLink = bucket + "/" + link + "/" + name;
+					let uploadLink = link + "/" + name;
 
 					window.console.log(this.uploadMessage.update);
 					let uploadMessage = this.uploadMessage;
@@ -125,7 +125,7 @@ export default Controller.extend({
 							let newFileVersion = store.createRecord("file-version", {
 								// newFileVersion need parent version id, kind
 								size: uploadMessage.file.size,
-								where: uploadLink,
+								where: bucket + "/" + uploadLink,
 								tag: new Date().getTime() + uploadMessage.file.name
 							});
 

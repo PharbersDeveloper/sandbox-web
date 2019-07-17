@@ -1,10 +1,10 @@
 import Route from "@ember/routing/route";
 import { inject as service } from "@ember/service";
-import ENV from "upload-files/config/environment";
+import ENV from "sandbox-web/config/environment";
 
 export default Route.extend({
 	ajax: service(),
-	clientId: "5cbe7ab8f4ce4352ecb082a3",
+	clientId: ENV.clientId,
 	clientSecret: "5c90db71eeefcc082c0823b2",
 	showNav: false,
 	host: ENV.host,

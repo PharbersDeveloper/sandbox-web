@@ -51,6 +51,7 @@
   "dependencies": {
     "bower-components": "^1.0.0",
     "ember-cookies": "^0.4.0",
-    "ember-inflector": "^3.0.1"
+    "ember-inflector": "^3.0.1",
+    "eslint-plugin-node": "^9.1.0"
   }
 }

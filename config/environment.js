@@ -6,9 +6,9 @@ module.exports = function (environment) {
 		environment,
 		rootURL: '/',
 		locationType: 'auto',
-		redirectUri: "http://ucb.pharbers.com",
+		redirectUri: "http://sandbox.pharbers.com",
 		host: "http://oauth.pharbers.com",
-		clientId: "5cbe7ab8f4ce4352ecb082a3",
+		clientId: "5d2edc557483b756848f1526",
 		EmberENV: {
 			FEATURES: {
 				// Here you can enable experimental features on an ember canary build
@@ -32,6 +32,8 @@ module.exports = function (environment) {
 		// ENV.APP.LOG_TRANSITIONS = true;
 		// ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
 		// ENV.APP.LOG_VIEW_LOOKUPS = true;
+		ENV.redirectUri = 'http://sandbox.pharbers.com:8082';
+		ENV.host = 'http://192.168.100.116:9096';
 	}
 
 	if (environment === 'test') {
@@ -47,6 +49,8 @@ module.exports = function (environment) {
 	}
 
 	if (environment === 'production') {
+		ENV.redirectUri = 'http://sandbox.pharbers.com';
+		ENV.host = 'http://oauth.pharbers.com';
 		// here you can enable a production-specific feature
 	}
 
