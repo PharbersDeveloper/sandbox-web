@@ -1,0 +1,16 @@
+<div>
+	upload files
+	<form id="uploadForm" method="POST" action="upload" enctype="multipart/form-data">
+		<input type="file" id="myFile" name="file">
+		<input type="submit" value="提交" {{ action 'uploadFiles' }}>
+	</form>
+</div>
+<div>Update Files
+	{{#each model as |msg|}}
+		<div>
+			<label for="{{msg.name}}">File Name: {{msg.name}} -- File Size: {{msg.size}}</label>
+			<input type="radio" name="{{msg.datumKey}}" id="testBox" class="updateRadio">
+		</div>
+	{{/each}}</div>
+<!-- 引入在线资源 -->
+<script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-6.1.1.min.js"></script>
