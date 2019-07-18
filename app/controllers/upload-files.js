@@ -138,11 +138,11 @@ export default Controller.extend({
 								);
 								let versionList = await datum.get("fileVersions");
 								window.console.log(datum);
-								// datum.get("fileVersions").pushObject(newFileVersion);
 								newFileVersion.set(
 									"parent",
 									versionList.objectAt(versionList.length - 1).id
 								);
+								datum.get("fileVersions").pushObject(newFileVersion);
 								// window.consoe.log(".");
 
 								newFileVersion.save().then(function () {
