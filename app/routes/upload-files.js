@@ -4,10 +4,10 @@ import { inject as service } from "@ember/service";
 export default Route.extend({
 	cookies: service(),
 	beforeModel() {
-		let cookies = this.get("cookies");
-		if (!cookies.read("token")) {
-			this.transitionTo("login");
-		}
+		// let cookies = this.get("cookies");
+		// if (!cookies.read("token")) {
+		// 	this.transitionTo("login");
+		// }
 	},
 	model() {
 		let accountId = this.cookies.read("account_id");
